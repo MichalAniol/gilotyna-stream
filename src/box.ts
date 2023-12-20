@@ -1,11 +1,11 @@
 const box = (function () {
     const { context, view } = init
-    const { x, y, width, height } = view.box
 
 
     const draw = () => {
+        const { x, y, width, height } = view.box
+
         const gradient: CanvasGradient = context.createLinearGradient(x + width, y, x, y + height)
-        const opacity = '66'
         gradient.addColorStop(0, data.box.colors[0])
         gradient.addColorStop(.2, data.box.colors[1])
         gradient.addColorStop(.55, data.box.colors[2])
