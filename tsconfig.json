@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "AMD",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": false,
+    "sourceMap": false,
+    "downlevelIteration": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "outFile": "dist/index.js"
+  },
+  "files": [
+    "src/data.ts",
+    "src/init.ts",
+    "src/wave.ts",
+    "src/dots.ts",
+    "src/box.ts",
+    "src/text.ts",
+    "src/draw.ts",
+    "src/index.ts",
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "watchOptions": {
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents",
+    "fallbackPolling": "dynamicPriority",
+    "synchronousWatchDirectory": true,
+    "excludeDirectories": ["**/node_modules", "bin"],
+  }
+}

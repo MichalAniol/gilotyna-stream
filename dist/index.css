@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Mulish';
+    font-style: extrabold;
+    font-weight: 800;
+    src: url(./Mulish-ExtraBold.eot);
+    src: url(./Mulish-ExtraBold.eot?#iefix) format('embedded-opentype'),
+        url(./Mulish-ExtraBold.otf) format('otf'),
+        url(./Mulish-ExtraBold.svg#Mulish-ExtraBold) format('svg'),
+        url(./Mulish-ExtraBold.ttf) format('truetype'),
+        url(./Mulish-ExtraBold.woff) format('woff'),
+        url(./Mulish-ExtraBold.woff2) format('woff2');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: Mulish, sans-serif;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+#title {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 13.08vw;
+    height: 37.84vh;
+    background-color: #dadada;
+    font-size: 7vh;
+    font-weight: 800;
+    letter-spacing: 1vw;
+}
+
+#title div {
+    margin: 2.5vh 2vw 2.5vh 2vw;
+}
+
+#one {
+    padding-top: .5vh;
+}
+
+.black {
+    color: #0a090a;
+}
+
+.white {
+    color: #fefdfe;
+}
+
+.red {
+    color: #c72628;
+}
