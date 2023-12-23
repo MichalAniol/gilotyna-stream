@@ -4,8 +4,10 @@ const data = {
     },
     left: { // lewa strona obrazu
         background: {
-            colorLeft: '#cbdeba',
-            colorRight: '#fba976',
+            color: [
+                [0, '#cbdeba'], // [procent położenia koloru, kolor]
+                [100, '#fba976'],
+            ]
         },
         wave: { // fla czerwieni w górnej części
             enable: true, // widoczność
@@ -43,9 +45,11 @@ const data = {
     },
     right: { // prawa stona ekranu
         background: {
-            colorLeft: '#ff8469',
-            colorCenter: '#ebb5a0',
-            colorRight: '#bfa881',
+            color: [
+                [0, '#ff8469'], // [procent położenia koloru, kolor]
+                [50, '#ebb5a0'],
+                [100, '#bfa881'],
+            ]
         },
         text: { // napis gilotyna
             enable: true, // widoczność
@@ -77,11 +81,11 @@ const data = {
             bottom: 8.2, // odstęp od dołu w procentach względem wysokości całego obrazu
         },
         colors: [
-            '#4974af33',
-            '#fba97644',
-            '#fba97666',
-            '#ff846944',
-            '#4974af1a',
+            [0, '#4974af33'], // [procent położenia koloru, kolor]
+            [20, '#fba97644'],
+            [55, '#fba97666'],
+            [80, '#ff846944'],
+            [100, '#4974af1a'],
         ],
     },
 }

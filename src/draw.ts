@@ -3,8 +3,9 @@ const draw = (function () {
 
     const drawLeftPart = () => {
         const gradient = context.createLinearGradient(0, view.centerHeight, view.centerWidth, view.centerHeight)
-        gradient.addColorStop(0, data.left.background.colorLeft)
-        gradient.addColorStop(1, data.left.background.colorRight)
+        data.left.background.color.forEach((e: [number, string]) => {
+            gradient.addColorStop(e[0] / 100, e[1])
+        })
 
         context.fillStyle = gradient
         context.fillRect(0, 0, view.centerWidth, view.height)
@@ -12,9 +13,9 @@ const draw = (function () {
 
     const drawRightPart = () => {
         const gradient = context.createLinearGradient(view.centerWidth, 0, view.width, view.height)
-        gradient.addColorStop(0, data.right.background.colorLeft)
-        gradient.addColorStop(.5, data.right.background.colorCenter)
-        gradient.addColorStop(1, data.right.background.colorRight)
+        data.right.background.color.forEach((e: [number, string]) => {
+            gradient.addColorStop(e[0] / 100, e[1])
+        })
 
         context.fillStyle = gradient
         context.fillRect(view.centerWidth, 0, view.width, view.height)

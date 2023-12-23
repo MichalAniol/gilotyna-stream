@@ -4,8 +4,10 @@ const data = {
     },
     left: {
         background: {
-            colorLeft: '#cbdeba',
-            colorRight: '#fba976',
+            color: [
+                [0, '#cbdeba'],
+                [100, '#fba976'],
+            ]
         },
         wave: {
             enable: true,
@@ -43,9 +45,11 @@ const data = {
     },
     right: {
         background: {
-            colorLeft: '#ff8469',
-            colorCenter: '#ebb5a0',
-            colorRight: '#bfa881',
+            color: [
+                [0, '#ff8469'],
+                [50, '#ebb5a0'],
+                [100, '#bfa881'],
+            ]
         },
         text: {
             enable: true,
@@ -77,11 +81,11 @@ const data = {
             bottom: 8.2,
         },
         colors: [
-            '#4974af33',
-            '#fba97644',
-            '#fba97666',
-            '#ff846944',
-            '#4974af1a',
+            [0, '#4974af33'],
+            [20, '#fba97644'],
+            [55, '#fba97666'],
+            [80, '#ff846944'],
+            [100, '#4974af1a'],
         ],
     },
 };
@@ -315,11 +319,9 @@ const box = (function () {
     const draw = () => {
         const { x, y, width, height } = view.box;
         const gradient = context.createLinearGradient(x + width, y, x, y + height);
-        gradient.addColorStop(0, data.box.colors[0]);
-        gradient.addColorStop(.2, data.box.colors[1]);
-        gradient.addColorStop(.55, data.box.colors[2]);
-        gradient.addColorStop(.8, data.box.colors[3]);
-        gradient.addColorStop(1, data.box.colors[4]);
+        data.box.colors.forEach((e) => {
+            gradient.addColorStop(e[0] / 100, e[1]);
+        });
         context.fillStyle = gradient;
         context.fillRect(x, 0, view.centerWidth - x, height + y);
         context.fillRect(view.centerWidth, y, x + width - view.centerWidth, height);
@@ -343,16 +345,17 @@ const draw = (function () {
     const { context, view } = init;
     const drawLeftPart = () => {
         const gradient = context.createLinearGradient(0, view.centerHeight, view.centerWidth, view.centerHeight);
-        gradient.addColorStop(0, data.left.background.colorLeft);
-        gradient.addColorStop(1, data.left.background.colorRight);
+        data.left.background.color.forEach((e) => {
+            gradient.addColorStop(e[0] / 100, e[1]);
+        });
         context.fillStyle = gradient;
         context.fillRect(0, 0, view.centerWidth, view.height);
     };
     const drawRightPart = () => {
         const gradient = context.createLinearGradient(view.centerWidth, 0, view.width, view.height);
-        gradient.addColorStop(0, data.right.background.colorLeft);
-        gradient.addColorStop(.5, data.right.background.colorCenter);
-        gradient.addColorStop(1, data.right.background.colorRight);
+        data.right.background.color.forEach((e) => {
+            gradient.addColorStop(e[0] / 100, e[1]);
+        });
         context.fillStyle = gradient;
         context.fillRect(view.centerWidth, 0, view.width, view.height);
     };
