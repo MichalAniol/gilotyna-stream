@@ -18,7 +18,7 @@
 @media screen and (prefers-color-scheme: dark) {
     :root {
         --prime-color: #fff;
-        --second-color: #000;
+        --second-color: #fff;
         --background-color: #000;
         --outline-color: red;
     }
@@ -61,7 +61,7 @@ body {
 .item {
     width: 200px;
     height: 200px;
-    border: 3px solid var(--prime-color);
+    border: 3px solid var(--second-color);
     border-radius: 20px;
     background: linear-gradient(45deg, rgba(45, 34, 214, 1) 0%, rgba(166, 35, 163, 1) 35%, rgba(184, 18, 180, 1) 41%, rgba(11, 167, 199, 1) 100%);
     position: relative;
