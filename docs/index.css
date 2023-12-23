@@ -2,53 +2,83 @@
     font-family: 'Mulish';
     font-style: extrabold;
     font-weight: 800;
-    src: url(./Mulish-ExtraBold.eot);
-    src: url(./Mulish-ExtraBold.eot?#iefix) format('embedded-opentype'),
-        url(./Mulish-ExtraBold.otf) format('otf'),
-        url(./Mulish-ExtraBold.svg#Mulish-ExtraBold) format('svg'),
-        url(./Mulish-ExtraBold.ttf) format('truetype'),
-        url(./Mulish-ExtraBold.woff) format('woff'),
-        url(./Mulish-ExtraBold.woff2) format('woff2');
+    src: url(../fonts/Mulish-ExtraBold.eot);
+    src: url(../fonts/Mulish-ExtraBold.eot?#iefix) format('embedded-opentype'),
+        url(../fonts/Mulish-ExtraBold.otf) format('otf'),
+        url(../fonts/Mulish-ExtraBold.svg#Mulish-ExtraBold) format('svg'),
+        url(../fonts/Mulish-ExtraBold.ttf) format('truetype'),
+        url(../fonts/Mulish-ExtraBold.woff) format('woff'),
+        url(../fonts/Mulish-ExtraBold.woff2) format('woff2');
+}
+
+:root {
+    --font: Mulish, sans-serif;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --prime-color: #fff;
+        --second-color: #000;
+        --background-color: #000;
+        --outline-color: red;
+    }
+}
+
+@media screen and (prefers-color-scheme: light) {
+    :root {
+        --prime-color: #fff;
+        --second-color: #000;
+        --background-color: #fff;
+        --outline-color: red;
+    }
+}
+
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+*:focus-visible {
+    outline: 3px solid var(--outline-color);
+    outline-offset: 0px;
 }
 
 body {
-    margin: 0;
+    margin: 30px 10px 10px 30px;
     padding: 0;
     width: 100vw;
     height: 100vh;
     font-family: Mulish, sans-serif;
-    font-size: 20px;
     overflow: hidden;
+    background-color: var(--background-color);
 }
 
-#title {
+.list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 200px;
+    height: 200px;
+    border: 3px solid var(--prime-color);
+    border-radius: 20px;
+    background: linear-gradient(45deg, rgba(45, 34, 214, 1) 0%, rgba(166, 35, 163, 1) 35%, rgba(184, 18, 180, 1) 41%, rgba(11, 167, 199, 1) 100%);
+    position: relative;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+
+p {
+    color: var(--prime-color);
+    font-size: 26px;
+    margin: 0;
+    margin-right: 0px;
     position: absolute;
-    right: 0;
-    top: 0;
-    width: 13.08vw;
-    height: 37.84vh;
-    background-color: #dadada;
-    font-size: 7vh;
-    font-weight: 800;
-    letter-spacing: 1vw;
-}
-
-#title div {
-    margin: 2.5vh 2vw 2.5vh 2vw;
-}
-
-#one {
-    padding-top: .5vh;
-}
-
-.black {
-    color: #0a090a;
-}
-
-.white {
-    color: #fefdfe;
-}
-
-.red {
-    color: #c72628;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
