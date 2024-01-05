@@ -11,17 +11,17 @@
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
     "baseUrl": ".",
-    "outFile": "docs/basic/index.js"
+    "outFile": "../../docs/basic/index.js"
   },
   "files": [
-    "src/data.ts",
-    "src/init.ts",
-    "src/wave.ts",
-    "src/dots.ts",
-    "src/box.ts",
-    "src/text.ts",
-    "src/draw.ts",
-    "src/index.ts",
+    "data.ts",
+    "init.ts",
+    "wave.ts",
+    "dots.ts",
+    "box.ts",
+    "text.ts",
+    "draw.ts",
+    "index.ts",
   ],
   "exclude": [
     "node_modules"
