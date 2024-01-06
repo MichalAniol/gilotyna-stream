@@ -1,4 +1,5 @@
 # Gilotyna-Stream
+```https://michalaniol.github.io/gilotyna-stream/```
 
 w pliku src/data.ts znajdują się parametry wizualizacji
 
