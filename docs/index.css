@@ -18,7 +18,8 @@
 @media screen and (prefers-color-scheme: dark) {
     :root {
         --prime-color: #fff;
-        --second-color: #fff;
+        --second-color: #ccc;
+        --hover-color: #fff;
         --background-color: #000;
         --outline-color: red;
     }
@@ -27,7 +28,8 @@
 @media screen and (prefers-color-scheme: light) {
     :root {
         --prime-color: #fff;
-        --second-color: #000;
+        --second-color: #444;
+        --hover-color: #000;
         --background-color: #fff;
         --outline-color: red;
     }
@@ -82,8 +84,6 @@ p {
     transform: translate(-50%, -50%);
     text-align: center;
 }
-
-a {}
 
 .container {
     color: var(--second-color);
@@ -162,6 +162,11 @@ a {}
 }
 
 .container .box:hover {
-    box-shadow: 0px 0px 20px 1px #ffbb763f;
-    border: 1px solid rgba(255, 255, 255, 0.454);
+    box-shadow: 0px 0px 40px 1px rgba(128, 128, 128, .8);
+    border: 1px solid var(--hover-color);
+    color: var(--hover-color);
+}
+
+.mr15 {
+    margin-right: 15px;
 }
