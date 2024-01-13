@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'OpenSans-ExtraBold';
+    src: url(../fonts/OpenSans-ExtraBold.eot);
+    src: url(../fonts/OpenSans-ExtraBold.eot?#iefix) format('embedded-opentype'),
+        url(../fonts/OpenSans-ExtraBold.otf) format('otf'),
+        url(../fonts/OpenSans-ExtraBold.svg#OpenSans-ExtraBold) format('svg'),
+        url(../fonts/OpenSans-ExtraBold.ttf) format('truetype'),
+        url(../fonts/OpenSans-ExtraBold.woff) format('woff'),
+        url(../fonts/OpenSans-ExtraBold.woff2) format('woff2');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'OpenSans-ExtraBold', sans-serif;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+#title {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 9.3vw;
+    height: 41vh;
+    background-color: #dadada;
+    font-size: 5vh;
+    font-weight: 800;
+    letter-spacing: .5vw;
+    line-height: 6.8vh;
+}
+
+.gilotyna {
+    margin: 0 1.5vw 0 1.5vw;
+}
+
+.gilotyna-top {
+    width: 6.6vw;
+    height: 5vh;
+    background-color: #e80016;
+}
+
+.gilotyna-bottom {
+	width: 0;
+	height: 0;
+	border-left: 0 solid transparent;
+	border-right: 6.6vw solid transparent;
+	border-top: 5vw solid #e80016;
+}
+
+.text {
+    margin-left: 1.2vw;
+}
+
+#one {
+    padding-top: 3vh;
+}
+
+.black {
+    color: #0a090a;
+}
+
+.white {
+    color: #fefdfe;
+}
+
+.red {
+    color: #e80016;
+}
+
+.full-view {
+    position: absolute;
+    width: 100wv;
+    height: 1000hv;
+    left: 0;
+    top: 0;
+}
